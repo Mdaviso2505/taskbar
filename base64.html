@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        body {
+            background-color: #ffffff;
+            padding: 20px;
+            font-size: 14px;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .transaction-container {
+            width: 100%;
+            max-width: 600px;
+            background-color: #f8f9fc;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .transaction {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: white;
+            border-bottom: 1px solid #e0e0e0;
+            transition: background-color 0.3s ease;
+        }
+        .transaction:hover {
+            background-color: #f0f8ff;
+        }
+        .transaction-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        }
+        .transaction-icon img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .transaction-content {
+            flex: 1;
+            margin-left: 15px;
+        }
+        .transaction-content h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .transaction-content p {
+            font-size: 14px;
+            color: #666;
+            font-weight: 300;
+        }
+        .transaction-details {
+            text-align: right;
+            min-width: 100px;
+        }
+        .transaction-details p {
+            font-size: 14px;
+            font-weight: 300;
+            margin-bottom: 3px;
+        }
+        .transaction-details .amount {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ff4500; /* Attractive color for the amount */
+        }
+        .transaction-details .positive {
+            color: #4caf50;
+        }
+        .transaction-details .negative {
+            color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div class="transaction-container">
+        <!-- Transaction 1 -->
+        <div class="transaction">
+            <div class="transaction-icon">
+                <img src="payeer.png" alt="Payeer">
+            </div>
+            <div class="transaction-content">
+                <h3>Subscription</h3>
+                <p>ADPLAY</p>
+                <p>Trans ID: BIA0GYW9NQ</p>
+            </div>
+            <div class="transaction-details">
+                <p class="time">03:01pm 10/09/24</p>
+                <p class="amount negative">-৳10.00</p>
+            </div>
+        </div>
+
+        <!-- Transaction 2 -->
+        <div class="transaction">
+            <div class="transaction-icon">
+                <img src="bkash.png" alt="bKash">
+            </div>
+            <div class="transaction-content">
+                <h3>Received Money</h3>
+                <p>01334130495</p>
+                <p>Trans ID: BIA7GX6FV1</p>
+            </div>
+            <div class="transaction-details">
+                <p class="time">02:04pm 10/09/24</p>
+                <p class="amount positive">+৳54.00</p>
+            </div>
+        </div>
+
+        <!-- Transaction 3 -->
+        <div class="transaction">
+            <div class="transaction-icon">
+                <img src="binance.png" alt="Binance">
+            </div>
+            <div class="transaction-content">
+                <h3>Make Payment</h3>
+                <p>Goama Games</p>
+                <p>Trans ID: BI79E3104N</p>
+            </div>
+            <div class="transaction-details">
+                <p class="time">07:06pm 07/09/24</p>
+                <p class="amount negative">-৳100.00</p>
+            </div>
+        </div>
+
+        <!-- Transaction 4 -->
+        <div class="transaction">
+            <div class="transaction-icon">
+                <img src="bkash.png" alt="bKash">
+            </div>
+            <div class="transaction-content">
+                <h3>Received Money</h3>
+                <p>01334130495</p>
+                <p>Trans ID: BI72DUOJGU</p>
+            </div>
+            <div class="transaction-details">
+                <p class="time">03:35pm 07/09/24</p>
+                <p class="amount positive">+৳100.00</p>
+            </div>
+        </div>
+
+        <!-- Transaction 5 -->
+        <div class="transaction">
+            <div class="transaction-icon">
+                <img src="paypal.png" alt="PayPal">
+            </div>
+            <div class="transaction-content">
+                <h3>Send Money</h3>
+                <p>01825819308</p>
+                <p>Trans ID: BHC5MM4PWF</p>
+            </div>
+            <div class="transaction-details">
+                <p class="time">05:36am 12/08/24</p>
+                <p class="amount negative">-৳40.00</p>
+            </div>
+        </div>
+
+        <!-- Transaction 6 -->
+        <div class="transaction">
+            <div class="transaction-icon">
+                <img src="payeer.png" alt="Payeer">
+            </div>
+            <div class="transaction-content">
+                <h3>Received Money</h3>
+                <p>01334130495</p>
+                <p>Trans ID: BHC4MM3VUQ</p>
+            </div>
+            <div class="transaction-details">
+                <p class="time">04:54am 12/08/24</p>
+                <p class="amount positive">+৳40.00</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

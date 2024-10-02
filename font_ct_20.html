@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Multi-currency wallet clone">
+    <meta name="keywords" content="crypto, currency, wallet, bitcoin, ethereum, ripple">
+    <title>Crypto Prices</title>
+
+    <!-- Updated Font Link -->
+    <link href="https://fonts.googleapis.com/css1?family=Roboto:wght@300;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Style */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* Container */
+        .crypto-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Table Header */
+        .crypto-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eaeaea;
+            color: #999;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 0.5px; /* Slightly spaced letters */
+        }
+
+        /* Coin List Item */
+        .crypto-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .crypto-item img {
+            width: 32px;
+            height: 32px;
+            margin-right: 10px;
+        }
+
+        .crypto-name {
+            display: flex;
+            align-items: center;
+            font-weight: 300;
+            font-size: 17px;  /* Reduced font size */
+            color: #333;
+            letter-spacing: 0.5px; /* Adjust letter spacing */
+        }
+
+        .crypto-price {
+            font-size: 17px;  /* Reduced font size */
+            font-weight: 300;
+            color: #000;
+            letter-spacing: 0.5px; /* Adjust letter spacing */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main crypto list container -->
+    <div class="crypto-container">
+        <!-- Table Header -->
+        <div class="crypto-header">
+            <div>Name</div>
+            <div>Last Price</div>
+        </div>
+
+        <!-- Bitcoin -->
+        <div class="crypto-item">
+            <div class="crypto-name">
+                <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=023" alt="Bitcoin">
+                Bitcoin
+            </div>
+            <div class="crypto-price">$62,999.99</div>
+        </div>
+
+        <!-- Ethereum -->
+        <div class="crypto-item">
+            <div class="crypto-name">
+                <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png?v=023" alt="Ethereum">
+                Ethereum
+            </div>
+            <div class="crypto-price">$2,556.63</div>
+        </div>
+
+        <!-- Bitcoin Cash -->
+        <div class="crypto-item">
+            <div class="crypto-name">
+                <img src="https://cryptologos.cc/logos/bitcoin-cash-bch-logo.png?v=023" alt="Bitcoin Cash">
+                Bitcoin Cash
+            </div>
+            <div class="crypto-price">$336.89</div>
+        </div>
+
+        <!-- Litecoin -->
+        <div class="crypto-item">
+            <div class="crypto-name">
+                <img src="https://cryptologos.cc/logos/litecoin-ltc-logo.png?v=023" alt="Litecoin">
+                Litecoin
+            </div>
+            <div class="crypto-price">$65.48</div>
+        </div>
+
+        <!-- Dash -->
+        <div class="crypto-item">
+            <div class="crypto-name">
+                <img src="https://cryptologos.cc/logos/dash-dash-logo.png?v=023" alt="Dash">
+                Dash
+            </div>
+            <div class="crypto-price">$24.98</div>
+        </div>
+
+        <!-- Tether -->
+        <div class="crypto-item">
+            <div class="crypto-name">
+                <img src="https://cryptologos.cc/logos/tether-usdt-logo.png?v=023" alt="Tether">
+                Tether
+            </div>
+            <div class="crypto-price">$1.0046</div>
+        </div>
+
+        <!-- Ripple -->
+        <div class="crypto-item">
+            <div class="crypto-name">
+                <img src="https://cryptologos.cc/logos/xrp-xrp-logo.png?v=023" alt="Ripple">
+                Ripple
+            </div>
+            <div class="crypto-price">$0.5892</div>
+        </div>
+
+        <!-- Dogecoin -->
+        <div class="crypto-item">
+            <div class="crypto-name">
+                <img src="https://cryptologos.cc/logos/dogecoin-doge-logo.png?v=023" alt="Dogecoin">
+                Dogecoin
+            </div>
+            <div class="crypto-price">$0.1051</div>
+        </div>
+
+        <!-- Additional Cryptocurrencies -->
+        <div class="crypto-item">
+            <div class="crypto-name">
+                <img src="https://cryptologos.cc/logos/cardano-ada-logo.png?v=023" alt="Cardano">
+                Cardano
+            </div>
+            <div class="crypto-price">$0.45</div>
+        </div>
+        
+        <div class="crypto-item">
+            <div class="crypto-name">
+                <img src="https://cryptologos.cc/logos/chainlink-link-logo.png?v=023" alt="Chainlink">
+                Chainlink
+            </div>
+            <div class="crypto-price">$7.15</div>
+        </div>
+
+        <div class="crypto-item">
+            <div class="crypto-name">
+                <img src="https://cryptologos.cc/logos/stellar-xlm-logo.png?v=023" alt="Stellar">
+                Stellar
+            </div>
+            <div class="crypto-price">$0.12</div>
+        </div>
+
+        <div class="crypto-item">
+            <div class="crypto-name">
+                <img src="https://cryptologos.cc/logos/monero-xmr-logo.png?v=023" alt="Monero">
+                Monero
+            </div>
+            <div class="crypto-price">$155.39</div>
+        </div>
+
+        <div class="crypto-item">
+            <div class="crypto-name">
+                <img src="https://cryptologos.cc/logos/vechain-vet-logo.png?v=023" alt="VeChain">
+                VeChain
+            </div>
+            <div class="crypto-price">$0.022</div>
+        </div>
+
+        <div class="crypto-item">
+            <div class="crypto-name">
+                <img src="https://cryptologos.cc/logos/neo-neo-logo.png?v=023" alt="Neo">
+                Neo
+            </div>
+            <div class="crypto-price">$12.40</div>
+        </div>
+
+        <div class="crypto-item">
+            <div class="crypto-name">
+                <img src="https://cryptologos.cc/logos/tron-trx-logo.png?v=023" alt="Tron">
+                Tron
+            </div>
+            <div class="crypto-price">$0.06</div>
+        </div>
+
+        <div class="crypto-item">
+            <div class="crypto-name">
+                <img src="https://cryptologos.cc/logos/solana-sol-logo.png?v=023" alt="Solana">
+                Solana
+            </div>
+            <div class="crypto-price">$20.29</div>
+        </div>
+
+        <div class="crypto-item">
+            <div class="crypto-name">
+                <img src="https://cryptologos.cc/logos/algorand-algo-logo.png?v=023" alt="Algorand">
+                Algorand
+            </div>
+            <div class="crypto-price">$0.21</div>
+        </div>
+
+        <div class="crypto-item">
+            <div class="crypto-name">
+                <img src="https://cryptologos.cc/logos/crypto-com-coin-cro-logo.png?v=023" alt="Crypto.com Coin">
+                Crypto.com Coin
+            </div>
+            <div class="crypto-price">$0.08</div>
+        </div>
+
+        <div class="crypto-item">
+            <div class="crypto-name">
+                <img src="https://cryptologos.cc/logos/bittorrent-btt-logo.png?v=002" alt="BitTorrent">
+                BitTorrent
+            </div>
+            <div class="crypto-price">$0.0005</div>
+        </div>
+
+        <div class="crypto-item">
+            <div class="crypto-name">
+                <img src="https://cryptologos.cc/logos/flow-flow-logo.png?v=023" alt="Flow">
+                Flow
+            </div>
+            <div class="crypto-price">$1.12</div>
+        </div>
+
+    </div>
+
+</body>
+</html>

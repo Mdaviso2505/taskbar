@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Separator with Copy</title>
+    <style>
+        body {
+            font-family: Roboto, sans-serif;
+            background-color: white;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .output {
+            margin-top: 20px;
+        }
+        .output div {
+            background-color: #f1f1f1;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .output div span {
+            word-break: break-word;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Line Separator with Copy to Clipboard</h1>
+    <textarea id="inputText" placeholder="Enter your text here..."></textarea>
+    <button onclick="separateLines()">Separate Lines</button>
+
+    <div class="output" id="output"></div>
+
+    <script>
+        function separateLines() {
+            const inputText = document.getElementById('inputText').value;
+            const lines = inputText.split('\n');
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = ''; // Clear previous output
+            
+            lines.forEach((line, index) => {
+                const div = document.createElement('div');
+                
+                const span = document.createElement('span');
+                span.textContent = line;
+                
+                const button = document.createElement('button');
+                button.textContent = 'Copy';
+                button.onclick = () => copyToClipboard(line);
+
+                div.appendChild(span);
+                div.appendChild(button);
+                outputDiv.appendChild(div);
+            });
+        }
+
+        function copyToClipboard(text) {
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            alert(`Copied: ${text}`);
+        }
+    </script>
+
+</body>
+</html>

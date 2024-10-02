@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Taskbar with Roboto Font</title>
+    <style>
+        /* Importing Roboto-Light font */
+        @font-face {
+            font-family: 'RobotoLight';
+            src: url('Roboto-Light.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'RobotoLight', sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Fullscreen iframe except for taskbar */
+        .content-area {
+            flex-grow: 1;
+            width: 100%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Taskbar styles */
+        .taskbar {
+            position: relative;
+            height: 80px; /* Increased height for taskbar */
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-around;
+            padding: 5px 0; /* Padding for taskbar */
+            z-index: 2;
+            border-radius: 15px 15px 0 0; /* Rounded top corners */
+        }
+
+        .taskbar-item {
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .taskbar-item img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 5px; /* Space between the image and the text */
+        }
+
+        .taskbar-item p {
+            margin: 0;
+            font-size: 12px;
+            color: #333;
+        }
+
+        /* Hover effect */
+        .taskbar-item:hover {
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+
+        /* For mobile responsiveness */
+        @media (max-width: 768px) {
+            .taskbar-item img {
+                width: 34px;
+                height: 34px;
+            }
+            .taskbar-item p {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Display area for content -->
+    <div class="content-area">
+        <!-- Iframe to load the selected content -->
+        <iframe id="content-frame" src="" style="display: none;"></iframe>
+    </div>
+
+    <!-- Taskbar with icons and text -->
+    <div class="taskbar">
+        <div class="taskbar-item" onclick="handleClick('Payment Proof')">
+            <img src="payment-proof.png" alt="Payment Proof">
+            <p>Payment Proof</p>
+        </div>
+        <div class="taskbar-item" onclick="handleClick('Play Game')">
+            <img src="play-game.png" alt="Play Game">
+            <p>Play Game</p>
+        </div>
+        <div class="taskbar-item" onclick="handleClick('History')">
+            <img src="history.png" alt="History">
+            <p>History</p>
+        </div>
+        <div class="taskbar-item" onclick="handleClick('Profile')">
+            <img src="profile.png" alt="Profile">
+            <p>Profile</p>
+        </div>
+    </div>
+
+    <script>
+        function handleClick(section) {
+            const iframe = document.getElementById('content-frame');
+            
+            // Load different HTML files based on the clicked section
+            switch (section) {
+                case 'Payment Proof':
+                    iframe.src = 'font_ct_20.html'; // Load font_ct_20.html
+                    break;
+                case 'Play Game':
+                    iframe.src = 'hex_dec.html'; // Load hex_dec.html
+                    break;
+                case 'History':
+                    iframe.src = 'helo.html'; // Load base64.html
+                    break;
+                case 'Profile':
+                    iframe.src = 'login_wt.html'; // Load login_wt.html
+                    break;
+                default:
+                    alert(`You clicked on ${section}`);
+                    return;
+            }
+            
+            iframe.style.display = 'block'; // Show the iframe
+        }
+
+        // Automatically load "Play Game" when the page loads
+        window.onload = function() {
+            handleClick('Play Game');
+        }
+    </script>
+
+</body>
+</html>

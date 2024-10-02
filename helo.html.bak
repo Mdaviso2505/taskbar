@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment History</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        h1 {
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .history-item {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .history-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .history-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #eef3fc;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+        }
+
+        .history-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            image-rendering: auto;
+        }
+
+        .history-details {
+            flex-grow: 1;
+        }
+
+        .history-details p {
+            margin: 0;
+        }
+
+        .history-amount {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .deposit {
+            color: #4CAF50;
+        }
+
+        .withdraw {
+            color: #F44336;
+        }
+
+        .pending {
+            color: #FFC107;
+        }
+
+        .tx-id, .history-date-time {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .status-icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .status-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            image-rendering: auto;
+        }
+
+        .status-text {
+            font-size: 12px;
+            color: #888;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+  <div style="text-align: center;">
+  <h3>History</h3>
+</div>
+        <!-- Transaction History Items -->
+
+        <!-- Withdraw (Success) -->
+        <div class="history-item">
+            <div class="history-icon">
+                <img src="history_icon_3d.png" alt="Withdraw Icon">
+            </div>
+            <div class="history-details">
+                <p class="history-amount withdraw">-₱10.10</p>
+                <p class="tx-id">ID: 2127846509</p>
+                <p class="history-date-time">11 Sep 2024 / 17:09</p>
+            </div>
+            <div class="status-icon">
+                <img src="success_icon_3d.png" alt="Success Icon">
+                <div class="status-text">Success</div>
+            </div>
+        </div>
+
+        <!-- Deposit (Success) -->
+        <div class="history-item">
+            <div class="history-icon">
+                <img src="deposit_icon_3d.png" alt="Deposit Icon">
+            </div>
+            <div class="history-details">
+                <p class="history-amount deposit">+₱10.22</p>
+                <p class="tx-id">ID: 2127788795</p>
+                <p class="history-date-time">11 Sep 2024 / 14:27</p>
+            </div>
+            <div class="status-icon">
+                <img src="success_icon_3d.png" alt="Success Icon">
+                <div class="status-text">Success</div>
+            </div>
+        </div>
+
+        <!-- Pending -->
+        <div class="history-item">
+            <div class="history-icon">
+                <img src="history_icon_3d.png" alt="Pending Icon">
+            </div>
+            <div class="history-details">
+                <p class="history-amount pending">+₱50.00</p>
+                <p class="tx-id">ID: 2134567890</p>
+                <p class="history-date-time">20 Sep 2024 / 11:45</p>
+            </div>
+            <div class="status-icon pending">
+                <img src="failed_icon_3d.png" alt="Pending Icon">
+                <div class="status-text">Pending</div>
+            </div>
+        </div>
+
+        <!-- Withdraw (Success) -->
+        <div class="history-item">
+            <div class="history-icon">
+                <img src="history_icon_3d.png" alt="Withdraw Icon">
+            </div>
+            <div class="history-details">
+                <p class="history-amount withdraw">-₱15.30</p>
+                <p class="tx-id">ID: 2129846501</p>
+                <p class="history-date-time">12 Sep 2024 / 13:09</p>
+            </div>
+            <div class="status-icon">
+                <img src="success_icon_3d.png" alt="Success Icon">
+                <div class="status-text">Success</div>
+            </div>
+        </div>
+
+        <!-- Deposit (Success) -->
+        <div class="history-item">
+            <div class="history-icon">
+                <img src="deposit_icon_3d.png" alt="Deposit Icon">
+            </div>
+            <div class="history-details">
+                <p class="history-amount deposit">+₱20.00</p>
+                <p class="tx-id">ID: 2129988995</p>
+                <p class="history-date-time">12 Sep 2024 / 10:15</p>
+            </div>
+            <div class="status-icon">
+                <img src="success_icon_3d.png" alt="Success Icon">
+                <div class="status-text">Success</div>
+            </div>
+        </div>
+
+        <!-- Pending -->
+        <div class="history-item">
+            <div class="history-icon">
+                <img src="history_icon_3d.png" alt="Pending Icon">
+            </div>
+            <div class="history-details">
+                <p class="history-amount pending">+₱30.00</p>
+                <p class="tx-id">ID: 2137567891</p>
+                <p class="history-date-time">22 Sep 2024 / 09:40</p>
+            </div>
+            <div class="status-icon pending">
+                <img src="failed_icon_3d.png" alt="Pending Icon">
+                <div class="status-text">Pending</div>
+            </div>
+        </div>
+
+        <!-- Withdraw (Success) -->
+        <div class="history-item">
+            <div class="history-icon">
+                <img src="history_icon_3d.png" alt="Withdraw Icon">
+            </div>
+            <div class="history-details">
+                <p class="history-amount withdraw">-₱25.40</p>
+                <p class="tx-id">ID: 2131846502</p>
+                <p class="history-date-time">14 Sep 2024 / 18:30</p>
+            </div>
+            <div class="status-icon">
+                <img src="success_icon_3d.png" alt="Success Icon">
+                <div class="status-text">Success</div>
+            </div>
+        </div>
+
+        <!-- Deposit (Success) -->
+        <div class="history-item">
+            <div class="history-icon">
+                <img src="deposit_icon_3d.png" alt="Deposit Icon">
+            </div>
+            <div class="history-details">
+                <p class="history-amount deposit">+₱35.50</p>
+                <p class="tx-id">ID: 2135568892</p>
+                <p class="history-date-time">15 Sep 2024 / 12:25</p>
+            </div>
+            <div class="status-icon">
+                <img src="success_icon_3d.png" alt="Success Icon">
+                <div class="status-text">Success</div>
+            </div>
+        </div>
+
+        <!-- Pending -->
+        <div class="history-item">
+            <div class="history-icon">
+                <img src="history_icon_3d.png" alt="Pending Icon">
+            </div>
+            <div class="history-details">
+                <p class="history-amount pending">+₱100.00</p>
+                <p class="tx-id">ID: 2139867892</p>
+                <p class="history-date-time">23 Sep 2024 / 08:30</p>
+            </div>
+            <div class="status-icon pending">
+                <img src="failed_icon_3d.png" alt="Pending Icon">
+                <div class="status-text">Pending</div>
+            </div>
+        </div>
+
+        <!-- Withdraw (Success) -->
+        <div class="history-item">
+            <div class="history-icon">
+                <img src="history_icon_3d.png" alt="Withdraw Icon">
+            </div>
+            <div class="history-details">
+                <p class="history-amount withdraw">-₱5.10</p>
+                <p class="tx-id">ID: 2141346503</p>
+                <p class="history-date-time">16 Sep 2024 / 09:20</p>
+            </div>
+            <div class="status-icon">
+                <img src="success_icon_3d.png" alt="Success Icon">
+                <div class="status-text">Success</div>
+            </div>
+        </div>
+
+        <!-- Deposit (Success) -->
+        <div class="history-item">
+            <div class="history-icon">
+                <img src="deposit_icon_3d.png" alt="Deposit Icon">
+            </div>
+            <div class="history-details">
+                <p class="history-amount deposit">+₱15.00</p>
+                <p class="tx-id">ID: 2145568893</p>
+                <p class="history-date-time">17 Sep 2024 / 11:30</p>
+            </div>
+            <div class="status-icon">
+                <img src="success_icon_3d.png" alt="Success Icon">
+                <div class="status-text">Success</div>
+            </div>
+        </div>
+
+        <!-- Pending -->
+        <div class="history-item">
+            <div class="history-icon">
+                <img src="history_icon_3d.png" alt="Pending Icon">
+            </div>
+            <div class="history-details">
+                <p class="history-amount pending">+₱150.00</p>
+                <p class="tx-id">ID: 2159867893</p>
+                <p class="history-date-time">24 Sep 2024 / 14:10</p>
+            </div>
+            <div class="status-icon pending">
+                <img src="failed_icon_3d.png" alt="Pending Icon">
+                <div class="status-text">Pending</div>
+            </div>
+        </div>
+
+    </div>
+    </body>
+    </html>
